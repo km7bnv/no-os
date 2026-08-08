@@ -1,7 +1,7 @@
 CROSS = arm-none-eabi
 CC = $(CROSS)-gcc
 AS = $(CROSS)-as
-LD = $(CROSS)-ld
+$(LD) -T linker.ld kernel/startup.o kernel/kernel.o -o kernel/kernel.elf
 
 CFLAGS = -march=armv7-a -marm -ffreestanding -nostdlib -nostartfiles -Ikernel
 
