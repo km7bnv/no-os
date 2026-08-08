@@ -1,4 +1,4 @@
-@ PLACEHOLDER
+// PLACEHOLDER
 
 
 .global _start
