@@ -7,14 +7,6 @@ ENTRY(_start)
 SECTIONS
 {
     . = 0x8000;
-
-    .stack :
-    {
-        . = ALIGN(8);
-        __stack_start = .;
-        *(.stack)
-        __stack_end = .;
-    }
     
     .text :
     {
@@ -32,9 +24,17 @@ SECTIONS
     }
 
     .bss :
-{
-    __bss_start = .;
-    *(.bss)
-    __bss_end = .;
-}
+    {
+        __bss_start = .;
+        *(.bss)
+        __bss_end = .;
+    }
+
+    .stack :
+    {
+        . = ALIGN(8);
+        __stack_start = .;
+        *(.stack)
+        __stack_end = .;
+    }
 }
