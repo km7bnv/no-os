@@ -5,6 +5,10 @@ LD = $(CROSS)-ld
 
 CFLAGS = -march=armv7-a -marm -ffreestanding -nostdlib -nostartfiles -Ikernel
 
+all: kernel.elf
+
+.PHONY: all
+
 startup.o:
 	$(AS) -march=armv7-a kernel/startup.s -o kernel/startup.o
 
