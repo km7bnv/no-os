@@ -9,9 +9,9 @@
 
 
 _start:
+    cpsid if
     ldr sp, =_stack_top
     bl kernel_main
-
 
 hang:
     b hang
