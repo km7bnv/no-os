@@ -30,7 +30,7 @@ hang:
     b hang
 
 
-.section .bss
+.section .stack
 .align 8
 
 _stack:
